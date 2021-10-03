@@ -23,6 +23,13 @@
                         </div>
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Gender<span class="text-danger"> *</span></label> <input type="text" id="gender" name="email" placeholder="" onblur="validate(3)"> </div>
+                            <label for="gender">Gender</label>
+                            <select name="gender" id="gender">
+                                <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="non-denomination">Non denomination</option>
+                              <option value="Prefer-not-to-say">Prefer not to say</option>
+                            </select>
                             <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Age<span class="text-danger"> *</span></label> <input type="text" id="age" name="mob" placeholder="In years" onblur="validate(4)"> </div>
                         </div>
                         <div class="row justify-content-between text-left">
@@ -31,7 +38,21 @@
                         </div>
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Food preference?<span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(7)"> </div>
+                            <label for="food-pref">Food Preference?</label>
+                            <select name="food-pref" id="food-pref">
+                                <option value="all foods">All foods</option>
+                              <option value="vegan">Vegan</option>
+                              <option value="non-red-meats">Non red meats</option>
+                              <option value="Liquid">Liquid</option>
+                            </select>
                             <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Objectives?<span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(8)"> </div>
+                            <label for="objective">Objective?</label>
+                            <select name="objective" id="objective">
+                                <option value="reduce-weight">Reduce Weight</option>
+                              <option value="bulk-up">Bulk up</option>
+                              <option value="lean">Lean</option>
+                              <option value="status-quo">Status quo</option>
+                            </select>
                         </div>
                         <div class="row justify-content-end">
                             <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Obtain BMI</button> </div>
