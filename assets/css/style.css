@@ -1,28 +1,74 @@
-body {
-    color: #000;
-    overflow-x: hidden;
+html,
+body,
+.wrapper {
     height: 100%;
-    /* background-image: url("https://i.imgur.com/GMmCQHC.png"); */
-    background-repeat: no-repeat;
-    background-size: 100% 100%
+    margin: 0;
+    padding: 0;
+    /*background-image: url("https://i.imgur.com/GMmCQHC.png");*/
+}
+
+.wrapper {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .card {
-    padding: 30px 40px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    border: none !important;
+    border-radius: 5px;
+    border-width: 1px;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
-    font-size: 20px;
+    font-size: 18px;
+    max-width: 600px;
+    padding: 30px 40px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.columnLeft {
+    flex: 35%;
+}
+
+.columnRight {
+    flex: 75%;
+}
+
+.center {
+    justify-content: center;
+}
+
+.pulldown {
+    margin-top: 25px;
+}
+
+.largeButton {
+    width: 200px;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+}
+
+select {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+}
+
+select:hover {
+    cursor: pointer;
 }
 
 .inst-text {
     font-size: 25px;
-    color: #0e5308
-}
-
-.form-control-label {
-    margin-bottom: 0
+    color: #0e5308;
 }
 
 input,
@@ -34,35 +80,24 @@ button {
     box-sizing: border-box;
     border: 1px solid #0e5308;
     font-size: 12px !important;
-    font-weight: 300
+    font-weight: 300;
 }
-
-
-/* input:focus,
-textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #0e5308;
-    outline-width: 0;
-    font-weight: 400
-} */
 
 .btn-block {
     text-transform: uppercase;
     font-size: 15px !important;
     font-weight: 400;
     height: 43px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .btn-block:hover {
-    color: #0e5308 !important
+    color: #0e5308 !important;
 }
 
 button:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    outline-width: 0
+    outline-width: 0;
 }
