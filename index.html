@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Wellness Hub</title>
 </head>
+
 <body>
-    
+    <!-- Start of form section -->
+    <div class="wrapper">
+        <h1>Obtain your Body Mass Index (BMI)</h1>
+        <p class="inst-text">Please input your information in order to obtain your BMI.</p>
+        <div class="card">
+            <form class="form-card" onsubmit="event.preventDefault()">
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="fname">First Name: *</label>
+                    </div>
+                    <div class="columnRight">
+                        <input type="text" id="fname" name="fname" placeholder="Enter your first name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="lname">Last Name: *</label>
+                    </div>
+                    <div class="columnRight">
+                        <input type="text" id="lname" name="lname" placeholder="Enter your last name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="gender">Gender: *</label>
+                    </div>
+                    <div class="columnRight">
+                        <select name="gender" id="gender" class=" px-3">
+                            <option value="" disabled selected>Select your gender</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="PNS">Prefer Not Say</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="age">Age: *</label>
+                    </div>
+                    <div class="columnRight">
+                        <input type="text" id="age" name="mob" placeholder="In years">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="height">Height: *</label>
+                    </div>
+                    <div class="columnRight">
+                        <input type="text" id="height" name="job" placeholder="In cms" onblur="validate(5)">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="height">Weight *</label>
+                    </div>
+                    <div class="columnRight">
+                        <input type="text" id="weight" name="job" placeholder="In lbs" onblur="validate(6)">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="gender">Food preference? *</label>
+                    </div>
+                    <div class="columnRight">
+                        <select name="foodPreference" id="foodPreference" class=" px-3">
+                            <option value="" disabled selected>Select your food preference</option>
+                            <option value="option1">Food reference 1</option>
+                            <option value="option2">Food reference 2</option>
+                            <option value="option2">Food reference 3</option>
+                            <option value="option2">Food reference 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnLeft">
+                        <label class=" px-3" for="object">Objectives? *</label>
+                    </div>
+                    <div class="columnRight">
+                        <select name="objective" id="object" class=" px-3">
+                            <option value="" disabled selected>Select your objective</option>
+                            <option value="object1">Objective 1</option>
+                            <option value="object2">Objective 2</option>
+                            <option value="object2">Objective 3</option>
+                            <option value="object2">Objective 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row center pulldown">
+                    <button type="submit" class="btn-block btn-primary largeButton">Obtain BMI</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End of form section -->
 </body>
-</html>
