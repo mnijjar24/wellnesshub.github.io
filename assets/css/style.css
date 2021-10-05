@@ -66,7 +66,9 @@ select:hover {
     color: #0e5308;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     padding: 8px 15px;
     border-radius: 5px !important;
     margin: 5px 0px;
@@ -95,65 +97,69 @@ button:focus {
     outline-width: 0;
 }
 
+
 /* Contact Us/Footer Styles Start */
 
 .contact {
     background: rgb(207, 204, 187);
-  }
-  
-  .contact h2 {
+}
+
+.contact h2 {
     color: black;
     text-align: center;
-  }
-  
-  .contact-info{
-  text-align: right;
-  }
-  
-  .contact-info iframe{
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info iframe {
     height: 450px;
     width: 700px;
-  }
-  
+}
 
-  .information{
-      text-align: left;
-      font-size: 30px;
-      margin-top: -450px;
-  }
+.information {
+    text-align: left;
+    font-size: 30px;
+    margin-top: -450px;
+}
 
-  footer {
+footer {
     background: rgb(165, 164, 152);
     width: 100%;
     padding: 40px 35px;
     text-align: center;
-    }
-  
-    footer h2 {
-      display: inline;
-      color: #024e76;
-      font-size: 30px;
-      margin: 0;
-    }
-  
-    footer div {
-      float: right;
-      line-height: 1.5;
-      text-align: right;
-    }
-  
-    footer a {
-      color: #024e76;
-    }
-    
-    section {
-      padding: 60px;
-    }
+}
 
-    .section-title {
-        font-size: 40px;
-    }
+footer h2 {
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+}
 
-    .icons{
+footer div {
+    float: right;
+    line-height: 1.5;
+    text-align: right;
+}
+
+footer a {
+    color: #024e76;
+}
+
+section {
+    padding: 60px;
+}
+
+.section-title {
+    font-size: 40px;
+}
+
+.icons {
     display: center;
-  }
+}
+
+.hide {
+    display: none
+}
