@@ -15,65 +15,78 @@
 
     <!-- Bootstrap links end -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Wellness Hub</title>
+    <title>Wellness Hub | Home</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/188633-200.png"/>
 </head>
 
 <body>
 
     <!-- Start of Navigation -->
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img src="assets/images/Capture.PNG" width="50" height="50">
-            </a>
+     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="assets/images/251-2516558_health-heart-logo-health-and-wellness-png.png" width="90" height="80" alt="wellness hub logo">
+      </a>
+  
+      <a class="navbar-item">
+          Wellness Hub
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+          
+          <a href="#about" class="navbar-item">
+          About
+        </a>
+  
+        <a href="#BMI-form" class="navbar-item">
+          Form
+        </a>
+  
+        <a href="#contact-us" class="navbar-item">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- End of Navigation-->
 
-            <a class="navbar-item">
-            Wellness Hub
-            </a>
+   
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
+<!-- Start of Hero Image -->
+  <section class="hero is-large"
+    style="
+      background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('https://static01.nyt.com/images/2020/03/10/well/physed-immune1/physed-immune1-superJumbo.jpg?quality=90&auto=webp');
+      background-repeat: no-repeat;" alt="group of individuals running together along a boardwalk">
+    <div class="hero-body">
+      <p class="title">
+        View health as an Investment, not an Expense.
+      </p>
+      <p class="subtitle"> - John Quelch</p>
+    </div>
+  </section>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-end">
-
-                <a class="navbar-item">
-                    About
-                </a>
-
-                <a class="navbar-item">
-                    Form
-                </a>
-
-                <a class="navbar-item">
-                    Contact Us
-                </a>
-            </div>
-        </div>
-    </nav>
-    <!-- End of Navigation -->
-
-
-    <!-- Start of Hero Image -->
-    <section class="hero is-medium" style="
-      background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://burst.shopifycdn.com/photos/athlete-tying-running-shoes.jpg?width=1200&format=pjpg&exif=0&iptc=0');
-      background-repeat: no-repeat;">
-        <div class="hero-body">
-            <p class="title">
-                Medium hero
-            </p>
-            <p class="subtitle">
-                Medium subtitle
-            </p>
-        </div>
-    </section>
-    <!--End of Hero Image -->
 
     <!--ABOUT US SECTION TO BE ADDED HERE-->
+  <article id="about" class="message is-dark">
+    <div class="message-header">
+      <p>Welcome to the Wellness Hub!</p>
+      <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+        How is that fitness goal of yours coming along? Need some help with receipes or new workouts? <strong>You've come to the right place!</strong> 
+    </br>
+    Wellness Hub was created to help you learn more about your current physical levels and help you make healthier food choices and be excited to exercises.
+    </div>
+  </article>
+
 
     <!-- Start of form section -->
     <div class="wrapper" id="BMI-form">
@@ -205,12 +218,56 @@
     <!-- Start of Nutrition section -->
     <div class="hide" id="nutrition">
         <section>
-            <p id="" class="h2">Lorem</p>
+            <p id="" class="h2">Nutrition Plan</p>
             <blockquote class="blockquote">
-                <p id="" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eligendi neque nesciunt placeat hic facilis amet soluta! Numquam necessitatibus molestiae, animi fugit velit, dolorum quasi quo neque, maxime pariatur aspernatur.</p>
+                <p id="" class="mb-0">Please choose your nutritional preference from the dropdown selections below.</p>
             </blockquote>
+
+            <div id="responseContainer"></div>
+
+            <div>
+                <select id="nutritionEl">
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="pescetarian">Pescetarian</option>
+                  <option value="glutenFree">Gluten Free</option>
+                  <option value="grainFree">Grain Free</option>
+                  <option value="dairyFree">Dairy Free</option>
+                  <option value="highProtein">High Protein</option>
+                  <option value="lowSodium">Low Sodium</option>
+                  <option value="lowCarb">Low Carb</option>
+                  <option value="ketogenic">Ketogenic</option>
+                </select>
+                <button type="submit" class="nutrButton">Submit</button>
+              </div>
         </section>
     </div>
+    
+    <!-- <div class="hide" id="nutritionalInfo">
+        <p id="" class="h2"></p>
+        <blockquote class="blockquote">
+          <p id="" class="mb-0">Please choose your nutritional preference from the dropdown selections below.</p>
+        </blockquote>
+  
+        <div id="responseContainer"></div>
+  
+        <div>
+          <select id="nutritionEl">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="pescetarian">Pescetarian</option>
+            <option value="glutenFree">Gluten Free</option>
+            <option value="grainFree">Grain Free</option>
+            <option value="dairyFree">Dairy Free</option>
+            <option value="highProtein">High Protein</option>
+            <option value="lowSodium">Low Sodium</option>
+            <option value="lowCarb">Low Carb</option>
+            <option value="ketogenic">Ketogenic</option>
+          </select>
+          <button type="submit" class="nutrButton">Submit</button>
+        </div>
+  
+      </div> -->
     <!-- End of Nutrition section -->
 
     <!-- Start of Exercise section -->
@@ -308,6 +365,7 @@
     <!-- Footer End -->
 
     <script src="./assets/js/wellness.js"></script>
+    <script src="assets/js/nutrition.js"></script>
 </body>
 
 </html>
