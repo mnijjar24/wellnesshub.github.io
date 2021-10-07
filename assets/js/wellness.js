@@ -10,6 +10,9 @@ var searchHeightTextBox = document.querySelector('#height');
 var searchWeightTextBox = document.querySelector('#weight');
 var searchfoodPreferenceDropDown = document.querySelector('#foodPreference');
 var searchobjectDropDown = document.querySelector('#object');
+var bmiValueLabel = document.querySelector('#bmiValue');
+var bmiCategoryLabel = document.querySelector('#bmiCategory');
+var submitButton = document.querySelector('#submitButton');
 
 function bmiHeatMap() {
     searchBmiForm.classList.add('hide');
@@ -30,6 +33,14 @@ function bmiHeatMap() {
     console.log(foodPreference);
     var object = searchobjectDropDown.value;
     console.log(object);
+    bmi(weight / 2.2, height / 100);
+}
+
+function checkEmpty() {
+    var firstName = searchFirstNameTextBox.value;
+    if (firstName.trim() !== "") {
+        submitButton.disabled = false;
+    }
 }
 
 function nutritionPlan() {
@@ -40,4 +51,44 @@ function nutritionPlan() {
 function exercisePlan() {
     searchBmiOutput.classList.add('hide');
     searchExercisePlan.classList.remove('hide');
+}
+
+// The BMI Calculation API. This API spits out the number.
+async function bmi(weight, height) {
+    var url =
+        'https://body-mass-index-bmi-calculator.p.rapidapi.com/metric?weight=' +
+        weight +
+        '&height=' +
+        height;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-host': 'body-mass-index-bmi-calculator.p.rapidapi.com',
+            'x-rapidapi-key': '536b4b7d46msh58b39d99e9801fep13daafjsn88287e5fde13',
+        },
+    });
+
+    const bmiResponse = await response.json();
+
+    console.log(bmiResponse);
+    console.log(bmiResponse.bmi.toFixed(2));
+    bmiValueLabel.innerHTML = bmiResponse.bmi.toFixed(2);
+    getCategory(bmiResponse.bmi);
+}
+
+// This is the Category base don the BMI putput.
+async function getCategory(bmi) {
+    var url = 'https://body-mass-index-bmi-calculator.p.rapidapi.com/weight-category?bmi=' + bmi;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-host': 'body-mass-index-bmi-calculator.p.rapidapi.com',
+            'x-rapidapi-key': '536b4b7d46msh58b39d99e9801fep13daafjsn88287e5fde13',
+        },
+    });
+
+    const bmiResponse = await response.json();
+    const bmiCategory = bmiResponse.weightCategory;
+    bmiCategoryLabel.innerHTML = bmiCategory;
+    console.log(bmiCategory);
 }

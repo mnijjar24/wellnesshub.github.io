@@ -6,6 +6,8 @@
     padding-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
+    /* margin: auto;
+    max-width: 600px; */
 }
 
 .card {
@@ -98,6 +100,13 @@ button:focus {
 }
 
 
+/*This modifies the progress bar to show value and category*/
+
+.progress-bar {
+    height: 50px;
+}
+
+
 /* Contact Us/Footer Styles Start */
 
 .contact {
@@ -139,9 +148,9 @@ footer h2 {
 }
 
 footer div {
-    float: right;
+    float: center;
     line-height: 1.5;
-    text-align: right;
+    text-align: center;
 }
 
 footer a {

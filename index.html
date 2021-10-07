@@ -27,9 +27,7 @@
                 <img src="assets/images/Capture.PNG" width="50" height="50">
             </a>
 
-            <a class="navbar-item">
-          Wellness Hub
-      </a>
+            <a class="navbar-item">Wellness Hub</a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -40,18 +38,9 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-
-                <a class="navbar-item">
-          About
-        </a>
-
-                <a class="navbar-item">
-          Form
-        </a>
-
-                <a class="navbar-item">
-          Contact Us
-        </a>
+                <a class="navbar-item">About</a>
+                <a class="navbar-item">Form</a>
+                <a class="navbar-item">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -86,7 +75,7 @@
                         <label class=" px-3" for="fname">First Name: *</label>
                     </div>
                     <div class="columnRight">
-                        <input type="text" id="fname" name="fname" placeholder="Enter your first name" />
+                        <input type="text" id="fname" name="fname" placeholder="Enter your first name" onchange="checkEmpty()" />
                     </div>
                 </div>
                 <div class="row">
@@ -163,7 +152,8 @@
                     </div>
                 </div>
                 <div class="row center pulldown">
-                    <button type="submit" onclick="bmiHeatMap()" class="btn-block btn-primary largeButton">Obtain BMI</button>
+                    <button id="submitButton" type="submit" onclick="bmiHeatMap()" class="btn-block btn-primary largeButton" disabled>Obtain BMI</button>
+                    <!-- Included a disable and gave id for js file -->
                 </div>
             </form>
         </div>
@@ -172,12 +162,12 @@
 
     <!-- Start of Suggestion section-->
     <section class="hide" id="BMI-suggestions">
-        <div class="progress">
-            <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-
-            </div>
-
+        <!-- <div class="progress"> -->
+        <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <label id="bmiValue"></label>
+            <label id="bmiCategory"></label>
         </div>
+        <!-- </div> -->
         <div>
             <h2 id="" class="display-2"></h2>
             <blockquote id="" class="blockquote">
@@ -286,78 +276,9 @@
 
     <!-- Contact Us End -->
 
-    <!-- Suggestion section begin -->
-
-    <section id="" class="">
-        <div class="progress">
-            <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-
-            </div>
-
-        </div>
-        <div>
-            <h2 id="" class="display-2"></h2>
-            <blockquote id="" class="blockquote">
-                <p id="" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor id aliquet lectus proin. Accumsan in nisl nisi scelerisque eu ultrices. Vitae auctor eu augue ut lectus
-                    arcu bibendum. Volutpat sed cras ornare arcu dui vivamus arcu. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Sagittis vitae et leo duis
-                    ut diam. Nec dui nunc mattis enim ut tellus elementum. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam. Facilisis gravida neque convallis a cras semper. Eros in cursus turpis massa tincidunt dui ut. Ornare aenean
-                    euismod elementum nisi quis eleifend quam. Suspendisse in est ante in nibh mauris cursus.
-                </p>
-                <p id="" class="mb-0">
-                    Sit amet consectetur adipiscing elit pellentesque. Arcu odio ut sem nulla pharetra. Tempor id eu nisl nunc. Proin fermentum leo vel orci. Tellus at urna condimentum mattis pellentesque. Ridiculus mus mauris vitae ultricies leo. Metus vulputate eu scelerisque
-                    felis imperdiet proin fermentum leo. Tristique sollicitudin nibh sit amet commodo. Duis at tellus at urna condimentum. Augue interdum velit euismod in pellentesque massa. Eget est lorem ipsum dolor sit. Consequat mauris nunc congue
-                    nisi vitae suscipit. Tempor commodo ullamcorper a lacus vestibulum sed. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Proin libero nunc consequat interdum varius sit amet. Faucibus turpis in eu mi bibendum
-                    neque egestas. Magna fringilla urna porttitor rhoncus dolor purus. Sit amet mauris commodo quis imperdiet massa. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue.
-                </p>
-            </blockquote>
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary">Nutrition</button>
-            <button type="button" class="btn btn-primary">Exercises</button>
-        </div>
-    </section>
-    <!-- Suggestion section end -->
-
-    <!-- Nutrition/Exercises section begin -->
-    <section>
-        <div id="nutritionalExerciseInfo">
-            <div id="nutritionalInfo">
-                <p id="" class="h2"></p>
-                <blockquote class="blockquote">
-                    <p id="" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eligendi neque nesciunt placeat hic facilis amet soluta! Numquam necessitatibus molestiae, animi fugit velit, dolorum quasi quo neque, maxime pariatur aspernatur.</p>
-                </blockquote>
-            </div>
-            <div id="exerciseInfo">
-                <p id="" class="h2"></p>
-                <blockquote class="blockquote">
-                    <p id="" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eligendi neque nesciunt placeat hic facilis amet soluta! Numquam necessitatibus molestiae, animi fugit velit, dolorum quasi quo neque, maxime pariatur aspernatur.
-                    </p>
-                </blockquote>
-                <form class="form-card" onsubmit="event.preventDefault()">
-                    <div class="row">
-                        <div class="columnLeft">
-                            <label class=" px-3" for="gender">Exercises</label>
-                        </div>
-                        <div class="columnRight">
-                            <select name="exercisePreference" id="exercisePreference" class=" px-3">
-                            <option value="" disabled selected>Exercises</option>
-                            <option value="category">By Category</option>
-                            <option value="muscle">by Muscle</option>
-                            <option value="equipment">By Equipment</option>
-                        </select>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Nutrition/Exercises section end -->
-
     <!-- Footer Beginning -->
     <footer>
-        <h2> Developed by team-the-armorer.</h2>
+        <h2> Developed by Team The-Armorer</h2>
 
         <div>
             <a href="./privacy-policy.html">Read Our Privacy Policy</a><br /> &copy; 2021 Wellness Hub, Inc.
