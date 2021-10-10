@@ -30,10 +30,10 @@ function bmiHeatMap() {
     console.log(height);
     var weight = searchWeightTextBox.value;
     console.log(weight);
-    var foodPreference = searchfoodPreferenceDropDown.value;
-    console.log(foodPreference);
-    var object = searchobjectDropDown.value;
-    console.log(object);
+    // var foodPreference = searchfoodPreferenceDropDown.value;
+    // console.log(foodPreference);
+    // var object = searchobjectDropDown.value;
+    // console.log(object);
     bmi(weight / 2.2, height / 100);
 }
 
