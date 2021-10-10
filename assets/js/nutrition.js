@@ -42,3 +42,41 @@ async function getNutrition (nutritionEl) {
 }
 
 buttonEl.addEventListener("click", getNutrition);
+
+
+
+var nutritionSection = document.querySelector('.hide');
+var searchBmiOutput = document.querySelector('#BMI-suggestions');
+var searchOutput = document.querySelector('.hide');
+
+function backButton() {
+    searchBmiOutput.classList.add('hide');
+    nutritionSection.classList.remove('hide');
+    searchOutput.classList.remove('hide');
+
+}
+
+
+
+// function backButton(){
+//     // document.querySelector('.backButton').
+//     window.history.back();
+// }
+
+
+// let backClick = document.querySelector('backButton');
+// backClick.addEventListener('click', () => {
+//     window.history.back
+// });
+
+// var back=document.getElementById('back');
+
+// function backButton(){
+    
+//     if(text.classList==='newClass'){
+//         text.classList.remove('newClass')
+//     }
+//     else{
+//         text.classList.add('newClass');
+//     }
+// }
