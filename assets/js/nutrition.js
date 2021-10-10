@@ -47,15 +47,21 @@ buttonEl.addEventListener("click", getNutrition);
 
 var nutritionSection = document.querySelector('.hide');
 var searchBmiOutput = document.querySelector('#BMI-suggestions');
-var searchOutput = document.querySelector('.hide');
+var searchOutput = document.querySelector('#back');
+var output = document.querySelector('#nutritionEl');
+var button = document.querySelector('.nutrButton');
+var plan = document.querySelector('.nutrPlan');
+
+
 
 function backButton() {
     searchBmiOutput.classList.add('hide');
     nutritionSection.classList.remove('hide');
-    searchOutput.classList.remove('hide');
-
+    searchOutput.classList.add('hide');
+    output.classList.add('hide');
+    button.classList.add('hide');
+    plan.classList.add('hide');
 }
-
 
 
 // function backButton(){
