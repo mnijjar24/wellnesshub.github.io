@@ -214,15 +214,21 @@
     <!-- End of Suggestion section -->
 
     <!-- Start of Nutrition section -->
+    
     <div class="hide" id="nutrition">
+        <div id="back">
+            To revisit the previous page, click here:
+            <br>
+            <button onclick="backButton()">Go Back</button>
+        </div>
         <section>
-            <p id="" class="h2">Nutrition Plan</p>
+            <br />
+            <div class = "nutrPlan">
+            <p id="plan" class="h2">Nutrition Plan</p>
             <blockquote class="blockquote">
                 <p id="" class="mb-0">Please choose your nutritional preference from the dropdown selections below.</p>
             </blockquote>
-
-            <div id="responseContainer"></div>
-
+        </div>
             <div>
                 <select id="nutritionEl">
                   <option value="vegetarian">Vegetarian</option>
@@ -238,34 +244,14 @@
                 </select>
                 <button type="submit" class="nutrButton">Submit</button>
             </div>
+
+            <div id="responseContainer">
+                  <label id="nutrValue"></label>
+            </div>
+
         </section>
     </div>
 
-    <div class="hide" id="nutritionalInfo">
-        <p id="" class="h2"></p>
-        <blockquote class="blockquote">
-            <p id="" class="mb-0">Please choose your nutritional preference from the dropdown selections below.</p>
-        </blockquote>
-
-        <div id="responseContainer"></div>
-
-        <div>
-            <select id="nutritionEl">
-            <option value="vegetarian">Vegetarian</option>
-            <option value="vegan">Vegan</option>
-            <option value="pescetarian">Pescetarian</option>
-            <option value="glutenFree">Gluten Free</option>
-            <option value="grainFree">Grain Free</option>
-            <option value="dairyFree">Dairy Free</option>
-            <option value="highProtein">High Protein</option>
-            <option value="lowSodium">Low Sodium</option>
-            <option value="lowCarb">Low Carb</option>
-            <option value="ketogenic">Ketogenic</option>
-          </select>
-            <button type="submit" class="nutrButton">Submit</button>
-        </div>
-
-    </div>
     <!-- End of Nutrition section -->
 
     <!-- Start of Exercise section -->
@@ -352,17 +338,17 @@
         <br>
 
         <div class="icons">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-twitter"></i>
-            <i class="bi bi-linkedin"></i>
+            <a href="http://www.facebook.com" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="http://www.instagram.com" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="http://www.twitter.com" title="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="http://www.linkedin.com" title="Linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
 
     </footer>
     <!-- Footer End -->
 
     <script src="./assets/js/wellness.js"></script>
-    <script src="assets/js/nutrition.js"></script>
+    <script src="./assets/js/nutrition.js"></script>
 </body>
 
 </html>
