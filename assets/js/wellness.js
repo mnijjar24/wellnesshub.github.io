@@ -13,6 +13,7 @@ var searchobjectDropDown = document.querySelector('#object');
 var bmiValueLabel = document.querySelector('#bmiValue');
 var bmiCategoryLabel = document.querySelector('#bmiCategory');
 var submitButton = document.querySelector('#submitButton');
+var bmiContainer = document.querySelector('#bmiDisplayContainer');
 
 function bmiHeatMap() {
     searchBmiForm.classList.add('hide');
@@ -64,7 +65,7 @@ async function bmi(weight, height) {
         method: 'GET',
         headers: {
             'x-rapidapi-host': 'body-mass-index-bmi-calculator.p.rapidapi.com',
-            'x-rapidapi-key': '536b4b7d46msh58b39d99e9801fep13daafjsn88287e5fde13',
+            'x-rapidapi-key': '2f5baf829cmsh54100a732306284p172dedjsn41f7fa00847d',
         },
     });
 
@@ -76,14 +77,14 @@ async function bmi(weight, height) {
     getCategory(bmiResponse.bmi);
 }
 
-// This is the Category base don the BMI putput.
+// This is the Category API. It provides the category output in the HTML.
 async function getCategory(bmi) {
     var url = 'https://body-mass-index-bmi-calculator.p.rapidapi.com/weight-category?bmi=' + bmi;
     const response = await fetch(url, {
         method: 'GET',
         headers: {
             'x-rapidapi-host': 'body-mass-index-bmi-calculator.p.rapidapi.com',
-            'x-rapidapi-key': '536b4b7d46msh58b39d99e9801fep13daafjsn88287e5fde13',
+            'x-rapidapi-key': '2f5baf829cmsh54100a732306284p172dedjsn41f7fa00847d',
         },
     });
 
@@ -91,4 +92,13 @@ async function getCategory(bmi) {
     const bmiCategory = bmiResponse.weightCategory;
     bmiCategoryLabel.innerHTML = bmiCategory;
     console.log(bmiCategory);
+    if (bmiCategory === 'Under Weight') {
+        bmiContainer.classList.add('colorYellow');
+    } else if (bmiCategory === 'Normal Weight') {
+        bmiContainer.classList.add('colorGreen');
+    } else if (bmiCategory === 'Overweight') {
+        bmiContainer.classList.add('colorOrange');
+    } else if (bmiCategory === 'Obese') {
+        bmiContainer.classList.add('colorRed');
+    }
 }

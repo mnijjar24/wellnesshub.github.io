@@ -120,17 +120,33 @@ button:focus {
 
 .contact-info {
     text-align: right;
+    padding-right: 250px;
 }
 
+
+/*I adjusted the size of the goggle map*/
+
 .contact-info iframe {
-    height: 450px;
-    width: 700px;
+    height: 600px;
+    width: 600px;
 }
+
+
+/*I adjusted the margin-top to compress the content and adjusted the font-size*/
 
 .information {
     text-align: left;
-    font-size: 30px;
-    margin-top: -450px;
+    font-size: 20px;
+    margin-top: -250px;
+    margin-left: 300px;
+}
+
+
+/*I added this sub-class in order to maipulate the form which captures emial and inquiry*/
+
+.contact form {
+    margin: 10px;
+    padding-right: 600px;
 }
 
 footer {
@@ -171,4 +187,57 @@ section {
 
 .hide {
     display: none
+}
+
+
+/* Providing color coding to the BMI Calculation bar */
+
+.colorGreen {
+    background-color: #0e5308;
+}
+
+.colorYellow {
+    background-color: burlywood;
+}
+
+.colorOrange {
+    background-color: chocolate;
+}
+
+.colorRed {
+    background-color: darkred;
+}
+
+
+/* This part of the code seeks to make the Contact Us section responsive */
+
+.inputWidth {
+    width: 50%;
+}
+
+.contactSubmitButton {
+    display: block;
+    width: 10%;
+}
+
+.block {
+    display: block;
+}
+
+.contact-info iframe {
+    height: 250px;
+    width: 250px;
+}
+
+@media screen and (max-width: 1275px) {
+    .contact {
+        display: block;
+    }
+    .contact-info iframe {
+        height: 250px;
+        width: 250px;
+    }
+    .information {
+        margin-top: 50px;
+    }
 }
