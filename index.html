@@ -11,7 +11,8 @@
 
     <!-- Bootstrap links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Wellness Hub | Home</title>
@@ -24,14 +25,16 @@
     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
-                <img src="assets/images/251-2516558_health-heart-logo-health-and-wellness-png.png" width="90" height="80" alt="wellness hub logo">
+                <img src="assets/images/251-2516558_health-heart-logo-health-and-wellness-png.png" width="90"
+                    height="80" alt="wellness hub logo">
             </a>
 
             <a class="navbar-item">
                 Wellness Hub
             </a>
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -42,32 +45,37 @@
             <div class="navbar-end">
 
                 <a href="#about" class="navbar-item">
-          About
-        </a>
+                    About
+                </a>
 
                 <a href="#BMI-form" class="navbar-item">
-          Form
-        </a>
+                    Form
+                </a>
 
                 <a href="#contact-us" class="navbar-item">
-          Contact Us
-        </a>
+                    Contact Us
+                </a>
             </div>
         </div>
     </nav>
     <!-- End of Navigation-->
 
 
-
-    <!-- Start of Hero Image -->
-    <section class="hero is-large" style="
+<!-- style="
       background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('https://static01.nyt.com/images/2020/03/10/well/physed-immune1/physed-immune1-superJumbo.jpg?quality=90&auto=webp');
-      background-repeat: no-repeat;" alt="group of individuals running together along a boardwalk">
-        <div class="hero-body">
+      background-repeat: no-repeat;"  -->
+      
+    <!-- Start of Hero Image -->
+    <section class="hero is-large bgimage" alt="group of individuals running together along a boardwalk">
+        <div class="hero-body container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <p class="title">
                 View health as an Investment, not an Expense.
             </p>
             <p class="subtitle"> - John Quelch</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -79,9 +87,11 @@
             <button class="delete" aria-label="delete"></button>
         </div>
         <div class="message-body">
-            How is that fitness goal of yours coming along? Need some help with receipes or new workouts? <strong>You've come to the right place!</strong>
+            How is that fitness goal of yours coming along? Need some help with receipes or new workouts? <strong>You've
+                come to the right place!</strong>
             </br>
-            Wellness Hub was created to help you learn more about your current physical levels and help you make healthier food choices and be excited to exercises.
+            Wellness Hub was created to help you learn more about your current physical levels and help you make
+            healthier food choices and be excited to exercises.
         </div>
     </article>
 
@@ -97,7 +107,8 @@
                         <label class=" px-3" for="fname">First Name: *</label>
                     </div>
                     <div class="columnRight">
-                        <input type="text" id="fname" name="fname" placeholder="Enter your first name" onchange="checkEmpty()" />
+                        <input type="text" id="fname" name="fname" placeholder="Enter your first name"
+                            onchange="checkEmpty()" />
                     </div>
                 </div>
                 <div class="row">
@@ -174,7 +185,8 @@
                     </div>
                 </div> -->
                 <div class="row center pulldown">
-                    <button id="submitButton" type="submit" onclick="bmiHeatMap()" class="btn-block btn-primary largeButton" disabled>Obtain BMI</button>
+                    <button id="submitButton" type="submit" onclick="bmiHeatMap()"
+                        class="btn-block btn-primary largeButton" disabled>Obtain BMI</button>
                     <!-- Included a disable and gave id for js file -->
                 </div>
             </form>
@@ -185,7 +197,8 @@
     <!-- Start of Suggestion section-->
     <section class="hide" id="BMI-suggestions">
         <!-- <div class="progress"> -->
-        <div id="bmiDisplayContainer" class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+        <div id="bmiDisplayContainer" class="progress-bar w-100" role="progressbar" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100">
             <label id="bmiValue"></label>
             <label id="bmiCategory"></label>
         </div>
@@ -193,16 +206,29 @@
         <div>
             <h2 id="" class="display-2"></h2>
             <blockquote id="" class="blockquote">
-                <p id="" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor id aliquet lectus proin. Accumsan in nisl nisi scelerisque eu ultrices. Vitae auctor eu augue ut lectus
-                    arcu bibendum. Volutpat sed cras ornare arcu dui vivamus arcu. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Sagittis vitae et leo duis
-                    ut diam. Nec dui nunc mattis enim ut tellus elementum. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam. Facilisis gravida neque convallis a cras semper. Eros in cursus turpis massa tincidunt dui ut. Ornare aenean
+                <p id="" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Tortor id aliquet lectus proin. Accumsan in nisl nisi
+                    scelerisque eu ultrices. Vitae auctor eu augue ut lectus
+                    arcu bibendum. Volutpat sed cras ornare arcu dui vivamus arcu. Risus commodo viverra maecenas
+                    accumsan lacus vel facilisis volutpat est. Adipiscing elit duis tristique sollicitudin nibh sit amet
+                    commodo. Sagittis vitae et leo duis
+                    ut diam. Nec dui nunc mattis enim ut tellus elementum. Egestas erat imperdiet sed euismod nisi porta
+                    lorem mollis aliquam. Facilisis gravida neque convallis a cras semper. Eros in cursus turpis massa
+                    tincidunt dui ut. Ornare aenean
                     euismod elementum nisi quis eleifend quam. Suspendisse in est ante in nibh mauris cursus.
                 </p>
                 <p id="" class="mb-0">
-                    Sit amet consectetur adipiscing elit pellentesque. Arcu odio ut sem nulla pharetra. Tempor id eu nisl nunc. Proin fermentum leo vel orci. Tellus at urna condimentum mattis pellentesque. Ridiculus mus mauris vitae ultricies leo. Metus vulputate eu scelerisque
-                    felis imperdiet proin fermentum leo. Tristique sollicitudin nibh sit amet commodo. Duis at tellus at urna condimentum. Augue interdum velit euismod in pellentesque massa. Eget est lorem ipsum dolor sit. Consequat mauris nunc congue
-                    nisi vitae suscipit. Tempor commodo ullamcorper a lacus vestibulum sed. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Proin libero nunc consequat interdum varius sit amet. Faucibus turpis in eu mi bibendum
-                    neque egestas. Magna fringilla urna porttitor rhoncus dolor purus. Sit amet mauris commodo quis imperdiet massa. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue.
+                    Sit amet consectetur adipiscing elit pellentesque. Arcu odio ut sem nulla pharetra. Tempor id eu
+                    nisl nunc. Proin fermentum leo vel orci. Tellus at urna condimentum mattis pellentesque. Ridiculus
+                    mus mauris vitae ultricies leo. Metus vulputate eu scelerisque
+                    felis imperdiet proin fermentum leo. Tristique sollicitudin nibh sit amet commodo. Duis at tellus at
+                    urna condimentum. Augue interdum velit euismod in pellentesque massa. Eget est lorem ipsum dolor
+                    sit. Consequat mauris nunc congue
+                    nisi vitae suscipit. Tempor commodo ullamcorper a lacus vestibulum sed. Enim praesent elementum
+                    facilisis leo vel fringilla est ullamcorper eget. Proin libero nunc consequat interdum varius sit
+                    amet. Faucibus turpis in eu mi bibendum
+                    neque egestas. Magna fringilla urna porttitor rhoncus dolor purus. Sit amet mauris commodo quis
+                    imperdiet massa. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue.
                 </p>
             </blockquote>
         </div>
@@ -226,27 +252,31 @@
             <div class="nutrPlan">
                 <p id="plan" class="h2">Nutrition Plan</p>
                 <blockquote class="blockquote">
-                    <p id="" class="mb-0">Please choose your nutritional preference from the dropdown selections below.</p>
+                    <p id="" class="mb-0">Please choose your nutritional preference from the dropdown selections below.
+                    </p>
                 </blockquote>
             </div>
             <div>
                 <select id="nutritionEl">
-                  <option value="vegetarian">Vegetarian</option>
-                  <option value="vegan">Vegan</option>
-                  <option value="pescetarian">Pescetarian</option>
-                  <option value="glutenFree">Gluten Free</option>
-                  <option value="grainFree">Grain Free</option>
-                  <option value="dairyFree">Dairy Free</option>
-                  <option value="highProtein">High Protein</option>
-                  <option value="lowSodium">Low Sodium</option>
-                  <option value="lowCarb">Low Carb</option>
-                  <option value="ketogenic">Ketogenic</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="pescetarian">Pescetarian</option>
+                    <option value="glutenFree">Gluten Free</option>
+                    <option value="grainFree">Grain Free</option>
+                    <option value="dairyFree">Dairy Free</option>
+                    <option value="highProtein">High Protein</option>
+                    <option value="lowSodium">Low Sodium</option>
+                    <option value="lowCarb">Low Carb</option>
+                    <option value="ketogenic">Ketogenic</option>
                 </select>
                 <button type="submit" class="nutrButton">Submit</button>
             </div>
 
-            <div id="responseContainer">
-                <label id="nutrValue"></label>
+            <div class="container"  id="responseContainer">
+                <div class="row algn-items-start">
+                <label class="col-md-auto" id="nutrValue"></label>
+                </div>
+
             </div>
 
         </section>
@@ -256,27 +286,29 @@
 
     <!-- Start of Exercise section -->
     <div class="hide" id="exercise">
+        <div id="exerBack">
+            To revisit the previous page, click here:
+            <br>
+            <button onclick="backExerButton()">Go Back</button>
+        </div>
         <section>
-            <p id="" class="h2"></p>
-            <blockquote class="blockquote">
-                <p id="" class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eligendi neque nesciunt placeat hic facilis amet soluta! Numquam necessitatibus molestiae, animi fugit velit, dolorum quasi quo neque, maxime pariatur aspernatur.
-                </p>
-            </blockquote>
-            <form class="form-card" onsubmit="event.preventDefault()">
-                <div class=“row”>
-                    <div class=“columnLeft”>
-                        <label class="px-3" for="gender">Exercises</label>
-                    </div>
-                    <div class=“columnRight”>
-                        <select name=“exercisePreference” id=“exercisePreference” class="px-3">
-                        <option value=“” disabled selected>Exercises</option>
-                        <option value=“category”>By Category</option>
-                        <option value=“muscle”>By Muscle</option>
-                        <option value=“equipment”>By Equipment</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
+            <div id="exerPlan">
+                <p class="h2">Exercise Selection</p>
+                <blockquote class="blockquote">
+                    <p id="" class="mb-0">Select your exercise preference
+                    </p>
+                </blockquote>
+            </div>
+            <div>
+                <select id=“exercisePreference”>
+                    <option value=“exerciseAgain” disabled selected>Exercises</option>
+                    <option value=“bodyPart”>By Body Part</option>
+                    <option value=“target”>By Muscle</option>
+                    <option value=“equipment”>By Equipment</option>
+                </select>
+                <button type="submit" class='exerButton'>Submit</button>
+            </div>
+            <div id="resContainer"></div>
         </section>
     </div>
     <!-- End of Exercise section -->
@@ -294,7 +326,8 @@
         <!-- Modified the hight and width. Eliminated the height and changed width to 100%. -->
 
         <div class="contact-info">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.1079747227936!2d-120.42364418397035!3d37.92790791110593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090c49129b6ac57%3A0xb56c7eb95a2cd8bd!2sMain%20St%2C%20California%2095327!5e0!3m2!1sen!2sus!4v1616426329495!5m2!1sen!2sus"
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.1079747227936!2d-120.42364418397035!3d37.92790791110593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090c49129b6ac57%3A0xb56c7eb95a2cd8bd!2sMain%20St%2C%20California%2095327!5e0!3m2!1sen!2sus!4v1616426329495!5m2!1sen!2sus"
                 width="100%" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
         </div>
@@ -349,6 +382,7 @@
 
     <script src="./assets/js/wellness.js"></script>
     <script src="./assets/js/nutrition.js"></script>
+    <script src="./assets/js/exercise.js"></script>
 </body>
 
 </html>
